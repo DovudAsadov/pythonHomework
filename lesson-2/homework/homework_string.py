@@ -4,7 +4,7 @@ print(f"{name} {2024 - year} years old.")
 
 #Question 2
 txt = 'LMaasleitbtui'
-print(''.join(filter(str.isupper, txt)))
+print(f"{txt[1:3]}{txt[5]}{txt[7]}{txt[9]}{txt[11]}")
 
 #Question 3
 a1 = input("Enter string: ")
@@ -30,7 +30,7 @@ print(f"Output {a7.replace(a8, a9)}")
 
 #Question 8
 a10 = input("Enter a string: ")
-print(f"First: {s[0]}, Last: {s[-1]}")
+print(f"First: {a10[0]}, Last: {a10[-1]}")
 
 #Question 9
 print(input("Enter string: ")[::-1])
@@ -42,7 +42,17 @@ print(len(input("Enter sentence: ").split()))
 print(any(ch.isdigit() for ch in input("Enter string: ")))
 
 #Question 12
-print(input("Enter input: ").replace(" ", input("Enter separator: ")))
+list_of_words = []
+while True:
+    input_from_user = input("Enter input: ")
+    if not input_from_user: 
+        break
+    else:
+        list_of_words.append(input_from_user)
+
+separator = input("Enter separator: ")  
+print(separator.join(list_of_words)) 
+
 
 #Qestion 13
 print(input("Enter string: ").replace(" ", ""))
